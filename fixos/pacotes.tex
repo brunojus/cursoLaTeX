@@ -1,0 +1,121 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}                
+%\usetheme{CambridgeUS} %kkkkkkkkkkkk
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}  % 22222222222222
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen} 
+%\usetheme{Hannover} %llllllllllllll
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid} %3333333333333333333
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier} %2222222
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged} % 0000000000000000
+\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver} % 0000000000
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+\usecolortheme{dolphin} % 0000000
+%\usecolortheme{dove}   %%%%%%%%%%
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid} %%%%%%%%%%%
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}	
+\usepackage[utf8]{inputenc}	
+\usepackage{verbatim}
+\usepackage{xcolor,lipsum}
+\usepackage{listings,showexpl}
+\usepackage{amsmath}
+
+
+
+
+
+
+
+\pdfcompresslevel=9
+\pgfdeclareimage[width=2.5cm]{logo}{logo}
+\logo{\pgfuseimage{logo}}
+
+%--------------------------------------------
+%Definições para código com fundo listrado
+\newcommand\realnumberstyle[1]{#1}
+\makeatletter
+\newcommand{\zebra}[3]{%
+    {\realnumberstyle{#3}}%
+    \begingroup
+    \lst@basicstyle
+    \ifodd\value{lstnumber}%
+        \color{#1}\pgfsetfillopacity{0.9}%
+    \else
+        \color{#2}%
+    \fi
+        \rlap{\hspace*{\lst@numbersep}%
+        \color@block{\linewidth}{\ht\strutbox}{\dp\strutbox}%
+        }%
+    \endgroup
+}
+\makeatother
+
+\lstset{%
+language=tex,           %linguagem
+numbers=left,           %posição dos números
+stepnumber=1,           %frequencia de aparição dos números
+numbersep=5pt,
+numberstyle=\zebra{black!10}{white!35},
+basewidth={0.6em,0.45em},
+fontadjust=true,
+mathescape=true,
+tabsize=4,
+commentstyle=\color{blue},
+literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {É}{{\'E}}1 {ê}{{\^e}}1 {õ}{{\~o}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ç}{{\c c}}1 {³}{{$^3$}}1 {Ω}{{$\Omega$}}1,
+breaklines=true,
+showstringspaces=false,
+stringstyle=\color{cyan},
+basicstyle=\tiny\ttfamily}
+
+\newcommand{\code}{\small\ttfamily}
+% \defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
+% \setbeamertemplate{description item}[align left]
