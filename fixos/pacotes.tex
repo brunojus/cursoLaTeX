@@ -69,15 +69,20 @@
 \usepackage{listings,showexpl}
 \usepackage{amsmath}
 
-
-
-
-
-
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{transparent}
+\usepackage[font=footnotesize,labelformat=empty,
+            justification=raggedright,
+%            singlelinecheck=false
+  ]{caption}
 
 \pdfcompresslevel=9
 \pgfdeclareimage[width=2.5cm]{logo}{logo}
-\logo{\pgfuseimage{logo}}
+\logo{\transparent{0.2}\pgfuseimage{logo}}
+
 
 %--------------------------------------------
 %Definições para código com fundo listrado

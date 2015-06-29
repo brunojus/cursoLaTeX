@@ -4,21 +4,22 @@
 \AtBeginSection[]
 {
 \begin{frame}
-%\frametitle{Visão Global}
-\tableofcontents[currentsection]
+	\begin{multicols}{2}
+		\tableofcontents[currentsection]
+	\end{multicols}
 \end{frame}
 }
  
 \begin{document}
- {\small
- \maketitle}
+ \maketitle
  
-\input{luiz/introducao}
-%\input{danilo/ambientes}
-\input{danilo/arquivos}
+\input{historico/main}
+\input{intro/introducao}
+\input{ambientes/ambientes}
+\input{ambientes/arquivos}
+\input{tables/tabelas}
 \input{pablo/figuras}
 \input{pablo/referencias}
-\input{luiz/tabelas}
 
 
 \frame{
