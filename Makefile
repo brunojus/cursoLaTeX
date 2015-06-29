@@ -3,6 +3,11 @@
 
 INPUT = Curso_LaTeX
 
+SUBDIR_ROOTS := ambientes figuras fixos historico intro tables
+DIRS := . $(shell find $(SUBDIR_ROOTS) -type d)
+GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk
+GARBAGE := $(foreach DIR,$(DIRS),$(addprefix $(DIR)/,$(GARBAGE_PATTERNS)))
+
 all: clean optimize
 
 history:
@@ -42,7 +47,7 @@ do: *.tex
 		pdflatex $(INPUT);\
 	fi;
 	rm -rf search.temp
-	@make clean
+	# @make clean
 
 # Compila a cada alteração de qualquer arquivo *.tex ou de qualquer *.vhd dentro da pasta 'src'
 $(INPUT).pdf: conteudo/*.tex *.bib clean
@@ -70,7 +75,7 @@ optimize: do
 # Limpa qualquer sujeira que reste após compilação
 # Útil que objetos de linguagens são incluidos e ficam relatando erros após retirados.
 clean:
-	rm -rf *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg
+	rm -rfv $(GARBAGE)
 	
 buildclean:
 	rm -rf *.pdf
