@@ -47,7 +47,7 @@ do: *.tex
 		pdflatex $(INPUT);\
 	fi;
 	rm -rf search.temp
-	# @make clean
+	@make clean
 
 # Compila a cada alteração de qualquer arquivo *.tex ou de qualquer *.vhd dentro da pasta 'src'
 $(INPUT).pdf: conteudo/*.tex *.bib clean
