@@ -70,7 +70,7 @@ optimize: do
 	mv $(INPUT).pdf "$(notdir $(PWD)).pdf"
 	@echo "Informações do arquivo gerado:" $(notdir $(PWD)).pdf
 	pdfinfo "$(notdir $(PWD)).pdf"
-	rm -rf $(INPUT).pdf
+	# rm -rf $(INPUT).pdf
 	
 # Limpa qualquer sujeira que reste após compilação
 # Útil que objetos de linguagens são incluidos e ficam relatando erros após retirados.
@@ -110,4 +110,4 @@ configure:
 	rm -rv search.temp
 #	grep '^%' *.tex
 	
-.SILENT:
+# .SILENT:
