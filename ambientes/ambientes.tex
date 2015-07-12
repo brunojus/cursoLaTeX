@@ -1,6 +1,6 @@
 \section{Ambientes}
 \frame{
-Para compor textos com algum propósito especial, o \LaTeX define
+Para compor textos com algum propósito especial, o \LaTeX~define
 muitos tipos de ambientes para todas as classes de designs.
 Em geral, um ambiente é iniciado com o comando {\code\textbackslash begin\{...\}} e encerrado com
 um {\code\textbackslash end\{...\}} Tudo que está entre esses dois comandos é afetado pelo
@@ -116,6 +116,15 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
 \begin{frame}[fragile]
     Um dos ambientes matemáticos mais comuns é o {\code equation}.
 
+\vspace{0.5cm}
+\begin{CenteredBox}
+\begin{lstlisting}
+    \begin{equation}\label{eq1}
+        \int_0^{15} x~dx
+    \end{equation}
+\end{lstlisting}
+\end{CenteredBox}
+
     \begin{equation}\label{eq1}
         \int_0^{15} x~dx
     \end{equation}
@@ -123,6 +132,16 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
 
 \begin{frame}[fragile]
     Para uma sequencia de equações, é possível usar o {\code eqnarray}.
+
+\vspace{0.5cm}
+\begin{CenteredBox}
+\begin{lstlisting}
+    \begin{eqnarray}\label{eq2}
+        3x+y=2\\
+        y=2-3x \nonumber \\
+        y=2-3.(1)
+    \end{eqnarray}\end{lstlisting}
+\end{CenteredBox}
 
     \begin{eqnarray}\label{eq2}
         3x+y=2\\
@@ -134,15 +153,35 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
 \begin{frame}[fragile]
     Para uma sequencia de equações \textbf{alinhadas}, é possível usar o {\code align}.
 
+\vspace{0.5cm}
+\begin{CenteredBox}
+\begin{lstlisting}
+    \begin{align}\label{eq3}
+        2x - 5y &=  8 \\ 
+        3x + 9y &=  -12 - 25x + z
+    \end{align}
+\end{lstlisting}
+\end{CenteredBox}
+
     \begin{align}\label{eq3}
         2x - 5y &=  8 \\ 
         3x + 9y &=  -12 - 25x + z
     \end{align}
 \hrulefill\\
+
+\vspace{0.5cm}
+\begin{CenteredBox}
+\begin{lstlisting}
     \begin{align*}\label{eq4}
-        x&=y           &  w &=z              &  a&=b+c\\
-        2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
-        -4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
+        w &=z              &  a&=b+c\\
+        3w&=\frac{1}{2}z   &  a&=b\\
+    \end{align*}
+\end{lstlisting}
+\end{CenteredBox}
+
+    \begin{align*}\label{eq4}
+        w &=z              &  a&=b+c\\
+        3w&=\frac{1}{2}z   &  a&=b
     \end{align*}
 
 \end{frame}
@@ -151,7 +190,17 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
 \begin{frame}[fragile]
     Mas e quando queremos uma única equação com múltiplas linhas? Então usamos o {\code equation} com o {\code split}.
 
-    
+\vspace{0.5cm}
+\begin{CenteredBox}
+\begin{lstlisting}
+  \begin{equation} \label{eq5}
+    \begin{split}
+        A & = \frac{\pi r^2}{2} \\
+         & = \frac{1}{2} \pi r^2
+    \end{split}
+  \end{equation}
+\end{lstlisting}
+\end{CenteredBox}    
 
 \begin{equation} \label{eq5}
 \begin{split}
