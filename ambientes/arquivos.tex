@@ -25,89 +25,54 @@ Na produção científica é comum a publicação de trabalhos em modelos já  p
 
 
 \begin{frame}
-Utilizaremos dois {\it templates}, o {\it journal Procedia Computer Science} da editora \textbf{Elsevier} para publicação de artigos, e o relatório de engenheiros para o exercito americano ({\it Re­ports by US Army Corps of Engi­neers}).
+Utilizaremos dois {\it templates}, o {\it journal Procedia Computer Science} da editora \textbf{Elsevier} para publicação de artigos, e o relatório de engenheiros para o exercito americano {\it Reports by US army of Corps Engineers} .
 
-Execute o arquivo {\ttfamily ecrc-template.tex} presente na pasta {\ttfamily\textbackslash Curso\_LaTeX\textbackslash Exemplos\textbackslash Artigo}.
+Execute o arquivo {\ttfamily conteudo.tex} e {\ttfamily info.tex} presente na pasta na raiz do diretório de templates.
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.5]{figuras/figelsiever}
-\caption{Template \textit{Procedia Computer Science}}
+\includegraphics[scale=0.5]{figuras/template-dir.png}
+\caption{Diretório de templates}
 \end{center}
 \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]
-Na linha 130 do arquivo .tex aberto inclua o comando:
-\begin{verbatim}
-\input{editavel/pacotes}
-\end{verbatim}
-
-Essa linha deve ser inserida entes do comando
-
-\begin{verbatim}
-\begin{document}
-
-\begin{frontmatter}
-\end{verbatim}
-
+\begin{frame}
+Fizemos imports de maneira a facilitar a elaboração de relatórios/papers/etc tendo o mesmo conteúdo mas tendo saídas em templates e padrões diferentes. Dessa maneira, basta editar o arquivo {\ttfamily conteudo.tex} com o corpo do texto, e o {\ttfamily info.tex} com as informações de autores e etc.
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.5]{figuras/fig2}
-\caption{Inclusão de pacotes}
+\includegraphics[scale=0.5]{figuras/template-dir.png}
+\caption{Diretório de templates}
 \end{center}
 \end{figure}
 \end{frame}
 
+\begin{frame}
 
-
-\begin{frame}[fragile]
-Repita o procedimento anterior entre as linhas 160 e 180, incluindo dados conforme exposto na figura abaixo.
-Compilar \textit{F6}  e visualizar o resultado \textit{F7}.
 \begin{figure}
+Observe os comandos de \textbackslash input e \textbackslash bibliography nos arquivos tex internos de cada template:
 \begin{center}
-\includegraphics[scale=.5]{figuras/fig3}
-\caption{Inclusão de pacotes}
+\includegraphics[scale=0.4]{figuras/armyInputs.png}
+\caption{Inputs para uso genério de templates (Army Eng)}
 \end{center}
 \end{figure}
 \end{frame}
 
-
-\begin{frame}[fragile]
+\begin{frame}
 \begin{figure}
+Observe os comandos de \textbackslash input e \textbackslash bibliography nos arquivos tex internos de cada template:
 \begin{center}
-\includegraphics[scale=.4]{figuras/fig4}
-\caption{Início do artigo}
+\includegraphics[scale=0.4]{figuras/cicInputs.png}
+\caption{Inputs para uso genério de templates (Procedia)}
 \end{center}
 \end{figure}
 \end{frame}
-
 
 
 \begin{frame}[fragile]
 Compilar \textit{F6}, gerar referencia bibliográfica \textit{F11},  Compilar \textit{F6} e visualizar o resultado \textit{F7}.
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.5]{figuras/fig5}
-\caption{Finalizando o Artigo}
-\end{center}
-\end{figure}
 \end{frame}
 
 
 
-\begin{frame}
-No último exemplo as imagens são gráficos de forma programática, ou seja,
-não foi necessário gerar um figura em um editor externo ao \LaTeX.
-A criação de gráficos de forma programática gera imagens VETORIAIS, exemplos podem ser encontrados em:
-
-\vspace*{0.5cm}
-\begin{center}
-\url{http://www.texample.net/tikz/}
-\end{center}
-\vspace*{0.5cm}
-
-Outros exemplos estão disponíveis na pasta "$\backslash Curso\_ LaTeX \backslash Exemplos$". 
-Os exemplos nas pastas "$DocHell$" e "$Fisica\_moderna$" devem ser executados no arquivo "$main.tex$"
-\end{frame}
 
 
