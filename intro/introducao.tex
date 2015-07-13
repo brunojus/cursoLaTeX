@@ -1,31 +1,31 @@
 \section{Hello World}
 
 \subsection*{Modelo de artigo básico}
-\begin{frame}
+\begin{frame}{Meu primeiro documento}
 \begin{CenteredBox}
 	\lstinputlisting{intro/carta.tex}
 \end{CenteredBox}
 \end{frame}
 
 \subsection*{Modelo de artigo básico - Com título}
-\begin{frame}
+\begin{frame}{Minhas informações}
 \begin{CenteredBox}
 	\lstinputlisting{intro/carta1.tex}
 \end{CenteredBox}
 \end{frame}
 
 \subsection*{Modelo de artigo básico - IEEE}
-\begin{frame}
+\begin{frame}{IEEE}
 \begin{CenteredBox}
-	\lstinputlisting{intro/carta2.tex}
+	\lstinputlisting[linewidth=6cm,basicstyle=\tiny\ttfamily]{intro/carta2.tex}
 \end{CenteredBox}
 \end{frame}
 
 \subsection*{Sessões} % (fold)
 \label{sub:sess_es}
-\begin{frame}
+\begin{frame}{Um trabalho profundo}
 \begin{CenteredBox}
-	\lstinputlisting{intro/carta3.tex}
+	\lstinputlisting[linewidth=6cm,basicstyle=\tiny\ttfamily]{intro/carta3.tex}
 \end{CenteredBox}
 \end{frame}
 % subsection sess_es (end)
@@ -33,7 +33,8 @@
 \begin{frame}
 	\begin{table}[h]
 	\begin{center}
-	\begin{tabular}{|c|c|p{4cm}|}
+	\resizebox{\columnwidth}{!}{%
+	\begin{tabular}{|c|c|p{5cm}|}
 		\hline
 		\textbf{Comando} & \textbf{Nível} & \textbf{Detalhes} \\ \hline
 		\textbackslash part\{"part"\} & -1 & Não existem em cartas \\ \hline
@@ -44,6 +45,7 @@
 		\textbackslash paragraph\{"paragraph"\} & 4 & Não existem em cartas \\ \hline
 		\textbackslash subparagraph\{"subparagraph"\} & 5 & Não existem em cartas \\ \hline
 	\end{tabular}
+	}
 	\end{center}
 	\caption{Tabela de níveis}
 	\label{}
@@ -57,21 +59,21 @@
 
 % subsection caracteres_especiais (end)
 \label{sub:formata_o_b_sica}
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		% \item [{\code \textbackslash \%}]    Escreve \%
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		\item [{\code \textbackslash \%}]    Escreve \%
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		\item [{\code \textbackslash \%}]    Escreve \%
@@ -82,7 +84,7 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		\item [{\code \textbackslash \%}]    Escreve \%
@@ -92,7 +94,7 @@
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		\item [{\code \textbackslash \%}]    Escreve \%
@@ -102,7 +104,7 @@
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		\item [{\code \textbackslash \%}]    Escreve \%
@@ -113,7 +115,7 @@
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Caracteres Especiais}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \%}]    Comenta linha
 		\item [{\code \textbackslash \%}]    Escreve \%
@@ -129,14 +131,14 @@
 \subsection*{Estilos} % (fold)
 \label{sub:tamanhos}
 % texttt
-\begin{frame}
+\begin{frame}{Estilos}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \textbackslash textbf\{negrito\}}]    Escreve \textbf{negrito}
 		\item [{\code \textbackslash textit\{itálico\}}]    Escreve \textit{itálico}
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Estilos}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \textbackslash textbf\{negrito\}}]    Escreve \textbf{negrito}
 		\item [{\code \textbackslash textit\{itálico\}}]    Escreve \textit{itálico}
@@ -144,7 +146,7 @@
 	\end{description}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Estilos}
 	\begin{description}[maiortextodomundoqueconsigoes]
 		\item [{\code \textbackslash textbf\{negrito\}}]    Escreve \textbf{negrito}
 		\item [{\code \textbackslash textit\{itálico\}}]    Escreve \textit{itálico}
@@ -158,7 +160,7 @@
 \subsection*{Tamanhos} % (fold)
 \label{sub:tamanhos}
 
-\begin{frame}
+\begin{frame}{Tamanhos}
 	\begin{description}[maiortextodomundoqueconsigoescr]
 		\item [\code \{\textbackslash tiny Excreve texto\}] 	{\tiny Escreve texto}
 		\item [\code \{\textbackslash scriptsize Excreve texto\}] 	{\scriptsize Escreve texto}

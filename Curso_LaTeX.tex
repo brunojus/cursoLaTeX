@@ -5,7 +5,7 @@
 {
 \begin{frame}
 	\small
-	\begin{multicols}{3}
+	\begin{multicols}{2}
 		\tableofcontents[currentsection]
 	\end{multicols}
 \end{frame}
@@ -15,7 +15,17 @@
 \justify
  \maketitle
  
+
+\begin {frame}{Conteúdo}
+\small
+    \begin{multicols}{2}
+        \tableofcontents
+    \end{multicols}
+\end {frame}
+
+
 \input{historico/main}
+\input{ambientes/setup}
 \input{intro/introducao}
 \input{ambientes/ambientes}
 \input{ambientes/arquivos}
@@ -23,11 +33,12 @@
 \input{pablo/figuras}
 \input{pablo/referencias}
 
-
-\frame{
+\section*{} % (fold)
+\begin{frame}
 \begin{center}
-  \Huge \textbf {OBRIGADO!}
+  \Huge\ttfamily \textbf {OBRIGADO!}
 \end{center}
-}
+\end{frame}
+
 
 \end{document}

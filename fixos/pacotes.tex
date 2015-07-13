@@ -76,6 +76,9 @@
 \usepackage{parcolumns}
 \usepackage{pxfonts}
 \usepackage{transparent}
+\usepackage{ragged2e}
+
+
 \usepackage[font=footnotesize,labelformat=empty,
             justification=raggedright,
 %            singlelinecheck=false
@@ -113,7 +116,7 @@ stepnumber=1,           %frequencia de aparição dos números
 numbersep=5pt,
 numberstyle=\zebra{black!10}{white!35},
 basewidth={0.6em,0.45em},
-linewidth=6cm,
+linewidth=8cm,
 fontadjust=true,
 mathescape=true,
 tabsize=4,
@@ -123,9 +126,11 @@ literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {É}{{\'E}}1 {ê}{{
 breaklines=true,
 showstringspaces=false,
 stringstyle=\color{cyan},
-basicstyle=\tiny\ttfamily}
+deletekeywords={pi},
+morekeywords={begin, label, usepackage, section, subsection, subsubsection, paragraph, documentclass},
+basicstyle=\scriptsize\ttfamily}
 
-\newcommand{\code}{\small\ttfamily}
+\newcommand{\code}{\scriptsize\ttfamily}
 % \defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
 % \setbeamertemplate{description item}[align left]
 
@@ -135,4 +140,23 @@ basicstyle=\tiny\ttfamily}
 \end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}% And output it centered
 \makeatother
 
- \usepackage{ragged2e}
+\hypersetup{
+pdftitle={Introdução ao \LaTeX},
+pdfsubject={Uma abordagem prática},
+pdfkeywords={\LaTeX, UnB},
+backref=true,
+draft=false,
+%pdfstartview=fitR,
+bookmarks=true,
+bookmarksopen=true,
+colorlinks=true,
+linkcolor=black,
+urlcolor=blue,
+citecolor=black,%blue
+pdftex,
+bookmarks=true,
+linktocpage=true,   % makes the page number as hyperlink in table of content
+hyperindex=true,
+unicode=true
+}
+\pdfcompresslevel=9
