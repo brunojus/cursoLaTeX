@@ -48,10 +48,14 @@ Este texto ficará à direita.
 
 \subsection*{Exemplos de Ambientes: Listas} % (fold)
 
-\begin{frame}[fragile]
-O \LaTeX fornece três ambientes para a criação de listas ({\bf itemize, enumerate e description})
+\subsubsection*{Itemize} % (fold)
+\label{ssub:itemize}
 
-Exemplo de aplicação {\bf itemize:}
+% subsubsection itemize (end)
+\begin{frame}[fragile]
+O \LaTeX~fornece três ambientes para a criação de listas ({\bf itemize, enumerate e description})
+
+% Exemplo de aplicação {\bf itemize:}
 
 \begin{columns}
 \column[t]{6cm}
@@ -62,25 +66,12 @@ Exemplo de aplicação {\bf itemize:}
         \item description
     \end{itemize}
 \end{verbatim}
-\column[t]{6cm}
-\vspace{0.5cm}
 \begin{itemize}
     \item itemize
     \item enumerate
     \item description
 \end{itemize}
-\end{columns}
-\end{frame}
-
-
-
-\begin{frame}[fragile]
-Exemplo de aplicação {\bf enumerate e description:}.\\
-No ambiente {\bf description} os itens citados não são numerados, 
-mas se utilizar um número ou uma letra entre colchetes, este será visualizado em evidenciado.
-\vspace*{-0.5cm}
-\begin{columns}
-\column[t]{5cm}
+\column[t]{6cm}
 \begin{verbatim}
     \begin{enumerate}
         \item itemize
@@ -94,6 +85,16 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
 \item description
 \end{enumerate}
 
+\end{columns}
+\end{frame}
+
+
+\subsubsection*{enumerate e description} % (fold)
+\begin{frame}[fragile]
+No ambiente {\bf description} os itens citados não são numerados, 
+mas se utilizar um número ou uma letra entre colchetes, este será visualizado em evidenciado.
+
+\begin{columns}
 \column[t]{6cm}
 \begin{verbatim}
     \begin{description}
@@ -102,6 +103,7 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
         \item[c)] description
     \end{description}
 \end{verbatim}
+\column[t]{6cm}
 \begin{description}
 \item[a)] itemize
 \item[b)] enumerate
@@ -111,7 +113,7 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
 \end{frame}
 
 
-\subsection*{Exemplos de Ambientes: Equações} % (fold)
+\subsection*{Exemplos de Ambientes: Matemáticos} % (fold)
 
 \begin{frame}[fragile]
     Um dos ambientes matemáticos mais comuns é o {\code equation}.
@@ -123,8 +125,8 @@ mas se utilizar um número ou uma letra entre colchetes, este será visualizado 
         \int_0^{15} x~dx
     \end{equation}
 \end{lstlisting}
+\vspace{0.5cm}
 \end{CenteredBox}
-
     \begin{equation}\label{eq1}
         \int_0^{15} x~dx
     \end{equation}
