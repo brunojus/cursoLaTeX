@@ -2,11 +2,12 @@
 
 \begin{frame}[fragile]
 \begin{block}{}
-Para incluir códigos externos em seu documento \LaTeX~usamos o pacote {\it listings}. Com ele podemos:
+Para incluir códigos externos em um documento \LaTeX~usamos o pacote {\it listings}. Com ele podemos:
 \begin{itemize}
  \item Adicionar texto não formatado (similar ao verbatim) mas com foco em código fonte.
- \item Com ele há a possibilidade de indicar a linguagem sendo mostrada, e dependendo a formatação e apresentação muda.
- \item É possível incluir somente determinadas linhas do código fonte.
+ \item Indicar a linguagem a ser mostrada, visto que, dependendo da linguagem a formatação muda.
+ \item Incluir somente trechos do código fonte.
+ \item Incluir arquivos de código externo na integra.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -49,7 +50,7 @@ firstline=37, lastline=45]{source_filename.py}
 
 \end{verbatim}
 
-Isso possibilita manter estável um \LaTeX~que gerará um documento que dependa de um código que vai mudar constantemente. Dessa forma mesmo que o código mude, o \LaTeX~permanece o mesmo e gera o documento desejado atualizado.
+Isso possibilita manter um documento \LaTeX~estável, mesmo que dependa de um código fonte externo que esteja sofrendo atualizações constantemente. Assim, a cada mudança do código, o documento é atualizado de imediato sem a necessidade de atualizar o arquivo {\ttfamily tex}.
 
 
 \end{frame}

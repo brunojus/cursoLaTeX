@@ -3,9 +3,9 @@
 
 INPUT = Curso_LaTeX
 
-SUBDIR_ROOTS := ambientes figuras fixos historico intro tables
+SUBDIR_ROOTS := ambientes figuras fixos historico intro tables citacoes templates
 DIRS := . $(shell find $(SUBDIR_ROOTS) -type d)
-GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk
+GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk *.tex~
 GARBAGE := $(foreach DIR,$(DIRS),$(addprefix $(DIR)/,$(GARBAGE_PATTERNS)))
 
 all: clean optimize
