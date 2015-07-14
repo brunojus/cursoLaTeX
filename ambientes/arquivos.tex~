@@ -27,7 +27,7 @@ Na produção científica é comum a publicação de trabalhos em modelos já  p
 \begin{frame}
 Utilizaremos dois {\it templates}, o {\it journal Procedia Computer Science} da editora \textbf{Elsevier} para publicação de artigos, e o relatório de engenheiros para o exercito americano {\it Reports by US army of Corps Engineers} .
 
-Para visualizar os {\it outputs} de cada {\it template}, basta compilar o arquivo {\ttfamily sample.tex} na pasta Army ou o {\ttfamily elsarticle-template.tex} na Elsevier. Essas pastas estão dentro do diretório de templates.
+Execute o arquivo {\ttfamily conteudo.tex} e {\ttfamily info.tex} presente na pasta na raiz do diretório de templates.
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.5]{figuras/template-dir.png}

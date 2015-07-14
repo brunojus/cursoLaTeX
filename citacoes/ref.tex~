@@ -2,7 +2,7 @@
 \begin{frame}[fragile]
 \begin{block}{}
 \begin{itemize}
- \item Em \LaTeX{} você pode facilmente referenciar quase tudo que é enumerado (sections, figures, formulas), e o \LaTeX{} irá  tratar o que for necessário para essas referências, atualizando sempe que houver modificações.
+ \item Em \LaTeX você pode facilmente referenciar quase tudo que é enumerado (sections, figures, formulas), e o \LaTeX irá  tratar o que for necessário para essas referências, atualizando sempe que houver modificações.
 \end{itemize}
 \end{block}
 \end{frame}

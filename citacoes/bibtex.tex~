@@ -20,13 +20,6 @@ Entretanto, o Bib\TeX{} é uma ferramenta que oferece muito mais flexibilidade n
 \end{lstlisting}
 \end{frame}
 
-\begin{frame}
-Uma lista de tipos de referências, com todas suas entradas possível, pode ser acessada pelo link:
-\begin{center}
-\url{https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management}
-\end{center}
-\end{frame}
-
 \subsection*{Coletando citações}
 
 \begin{frame}{Use o \href{http://scholar.google.com.br}{Google Acadêmico}}
