@@ -1,0 +1,68 @@
+\section{Inclusão de códigos externos em \LaTeX (listings)}
+
+\begin{frame}[fragile]
+\begin{block}{}
+Para incluir códigos externos em seu documento \LaTeX usamos o pacote {\it listings}. Com ele podemos:
+\begin{itemize}
+ \item Adicionar texto não formatado (similar ao verbatim) mas com foco em código fonte.
+ \item Com ele há a possibilidade de indicar a linguagem sendo mostrada, e dependendo a formatação e apresentação muda.
+ \item É possível incluir somente determinadas linhas do código fonte.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+Para incluir código fonte sem arquivo externo basta usar o comando: 
+
+\begin{verbatim}
+ 
+\begin{lstlisting} Put your code here. \end{lstlisting}
+
+ 
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+Para incluir código fonte com um arquivo externo basta usar o comando: 
+
+\begin{verbatim}
+ 
+\lstinputlisting{source_filename.py}
+
+\end{verbatim}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+Para incluir código fonte com um arquivo externo, definir a linguagem e escolher as linhas que serão mostradas basta usar o comando: 
+
+\begin{verbatim}[breaklines]
+ 
+\lstinputlisting[language=Python, 
+firstline=37, lastline=45]{source_filename.py}
+
+\end{verbatim}
+
+Isso possibilita manter estável um \LaTeX que gerará um documento que dependa de um código que vai mudar constantemente. Dessa forma mesmo que o código mude, o \LaTeX permanece o mesmo e gera o documento desejado atualizado.
+
+
+\end{frame}
+
+
+%\begin{frame}[fragile]
+%
+%Para incluir código fonte com um arquivo externo basta usar o comando: 
+%
+%\begin{description}[maiortextodomundoqueconsigoea]
+%\item [\textbackslash lstinputlisting\{source_filename.py\}]
+%\end{description}
+%
+%\end{frame}
