@@ -5,7 +5,7 @@ INPUT = Curso_LaTeX
 
 SUBDIR_ROOTS := ambientes figuras fixos historico intro tables citacoes templates
 DIRS := . $(shell find $(SUBDIR_ROOTS) -type d)
-GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk *.tex~
+GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk *.tex~ *.gnuplot *.table
 GARBAGE := $(foreach DIR,$(DIRS),$(addprefix $(DIR)/,$(GARBAGE_PATTERNS)))
 
 all: clean optimize
@@ -23,20 +23,20 @@ do: *.tex
 		then \
 			echo " ";\
 			echo -n "Montando bibliografias..." ;\
-			pdflatex $(INPUT);\
+			# pdflatex -interaction=batchmode $(INPUT);\
 			pdflatex -interaction=batchmode $(INPUT);\
 			bibtex $(INPUT) -terse;\
 			pdflatex -interaction=batchmode $(INPUT);\
 			makeglossaries $(INPUT);\
 			makeindex $(INPUT).glo -s $(INPUT).ist -t $(INPUT).glg -o $(INPUT).gls;\
 			pdflatex -interaction=batchmode $(INPUT);\
-			pdflatex -interaction=batchmode $(INPUT);\
+			# pdflatex -interaction=batchmode $(INPUT);\
 			echo "Feito.";\
 		else \
-			pdflatex $(INPUT);\
-			makeglossaries $(INPUT);\
-			makeindex $(INPUT).glo -s $(INPUT).ist -t $(INPUT).glg -o $(INPUT).gls;\
-			pdflatex $(INPUT);\
+			pdflatex -interaction=batchmode $(INPUT);\
+			# makeglossaries $(INPUT);\
+			# makeindex $(INPUT).glo -s $(INPUT).ist -t $(INPUT).glg -o $(INPUT).gls;\
+			pdflatex -interaction=batchmode $(INPUT);\
 			echo " ... Sem bibliografias";\
 		fi;\
 	else \
@@ -44,7 +44,8 @@ do: *.tex
 		pdflatex $(INPUT);\
 		pdflatex -interaction=batchmode $(INPUT);\
 		makeindex $(INPUT).glo -s $(INPUT).ist -t $(INPUT).glg -o $(INPUT).gls;\
-		pdflatex $(INPUT);\
+		pdflatex -interaction=batchmode $(INPUT);\
+		echo "Feito.";\
 	fi;
 	rm -rf search.temp
 	@make clean

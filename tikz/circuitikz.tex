@@ -1,0 +1,24 @@
+% \usepackage{tikz}
+% \usepackage{circuitikz}
+
+\begin{figure}[h]
+	\centering
+	\resizebox {0.8\columnwidth} {!} {
+		\begin{circuitikz} 
+			\draw
+				(0,0) to [R=$R_1$,*-*] (3,3)
+				(0,0) to [R=$R_3$,*-*] (3,-3)
+				(3,-3) to [R=$R_x$,*-*] (6,0)
+				(3,3) to [R=$R_2$,*-*] (6,0)
+				(0,0)to[ammeter] (6,0)
+				(3,-3) node[ground] {};
+			\draw (3,3) -- node[] {} (3,3.5);
+			\draw (2.5,3.5) --  node[anchor=south] 
+				{VCC} (3.5,3.5)  node[anchor=west] {};
+			\draw (0,0) node[anchor=east]{$A$};
+			\draw (6,0) node[anchor=west]{$B$};
+		\end{circuitikz}
+	}
+	\caption[Circuito]{ }
+	\label{circ}
+\end{figure}

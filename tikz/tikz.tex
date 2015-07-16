@@ -1,0 +1,49 @@
+
+\section{Tikz} % (fold)
+\label{sec:tikz}
+
+\begin{frame}{O que é?}
+\begin{block}{}
+	\begin{itemize}
+		\item Um dos melhores pacotes para {\bf produzir} gráficos \underline{vetorizados} em \LaTeX.
+		\item Possui um extensa \href{http://ftp.fau.de/ctan/graphics/pgf/base/doc/pgfmanual.pdf}{documentação}.
+		\item Disponibiliza diversos \href{http://www.texample.net/tikz/examples/}{exemplos} de como utilizar o pacote.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\subsection*{Vantagens \& Desvantagens}
+\begin{frame}{Vantagens}
+	\begin{multicols}{2}		
+	\input tikz/gnuplot
+	\input tikz/polar
+	\end{multicols}
+\end{frame}
+
+% section tikz (end)
+\begin{frame}{Vantagens}
+	\begin{multicols}{2}		
+	\input tikz/square
+	\input tikz/circuitikz
+	\end{multicols}
+\end{frame}
+
+
+\begin{frame}{Desvantagens}
+	\begin{block}{}
+		\begin{itemize}
+			\item Péssima curva de aprendizado.
+			\item Desalinhamento de  versões entre o disponibilizado nos repositórios com os apresentados nos exemplos.
+			\item {\it Sujo}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\subsection*{Exemplos}
+\begin{frame}{Circuito}
+	\lstinputlisting[linewidth=8cm,basicstyle=\tiny\ttfamily]{tikz/circuitikz.tex}
+\end{frame}
+
+\begin{frame}{GnuPlot}
+	\lstinputlisting[linewidth=8cm,basicstyle=\tiny\ttfamily]{tikz/gnuplot.tex}
+\end{frame}
