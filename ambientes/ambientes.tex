@@ -245,5 +245,33 @@ Texto $\oiintclockwise F(\alpha(t)),\alpha’(t)dt$ texto
 \vspace{0.25cm}
     $$\lim_{h \to 0} \dfrac{f(a+h)-f(a)}{h} =: f’(a)$$
 \end{center}
+\end{frame}
 
+\begin{frame}[fragile]
+O pacote amsmath também fornece ambientes para construir matrizes e vetores. São eles pmatrix, bmatrix, Bmatrix, vmatrix e Vmatrix, que diferem apenas em qual delimitador é usado ($(\text{ }), [\text{ }], \{\text{ }\}, |\text{ }|$ e $\|\text{ }\|$, respectivamente).
+\begin{lstlisting}[linewidth=9cm]
+\begin{equation}
+A=
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & a_{23} & \dots  & a_{2n} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & a_{m3} & \dots  & a_{mn}
+\end{bmatrix}
+\end{equation}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{lstlisting}
+\begin{equation}
+\mathbf{U}(x,y,0)=\mathbf{\bar{U}}(x,y)+0.05
+\begin{bmatrix}
+\alpha \\
+\beta \\
+\xi \\
+\frac {\mu}{\gamma -1}
+\end {bmatrix}
+\end{equation}
+\end{lstlisting}
 \end{frame}
