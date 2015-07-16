@@ -5,7 +5,7 @@ INPUT = Curso_LaTeX
 
 SUBDIR_ROOTS := ambientes figuras fixos historico intro tables citacoes templates
 DIRS := . $(shell find $(SUBDIR_ROOTS) -type d)
-GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk *.tex~ *.gnuplot *.table
+GARBAGE_PATTERNS := *.aux *.log *.toc *.bbl *.bak *.blg *.out *.lof *.lot *.lol *.glg *.glo *.ist *.xdy *.gls *.acn *.acr *.idx *.alg *.nav *.snm *.vrb *.fls *.fdb_latexmk *.tex~ *.table *.gnuplot
 GARBAGE := $(foreach DIR,$(DIRS),$(addprefix $(DIR)/,$(GARBAGE_PATTERNS)))
 
 all: clean optimize
@@ -16,7 +16,7 @@ history:
 do: *.tex
 	if test -f *.bib ;\
 	then \
-		pdflatex $(INPUT);\
+		pdflatex --shell-escape $(INPUT);\
 		echo -n "Buscando citações";\
 		grep -v "\%" conteudo/*.tex > search.temp;\
 		if grep '\\cite{'  search.temp -qn;\
@@ -41,7 +41,7 @@ do: *.tex
 		fi;\
 	else \
 		echo "Arquivo de bibliografias inexistente.";\
-		pdflatex $(INPUT);\
+		pdflatex --shell-escape $(INPUT);\
 		pdflatex -interaction=batchmode $(INPUT);\
 		makeindex $(INPUT).glo -s $(INPUT).ist -t $(INPUT).glg -o $(INPUT).gls;\
 		pdflatex -interaction=batchmode $(INPUT);\
