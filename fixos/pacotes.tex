@@ -64,7 +64,7 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}	
-\usepackage[utf8]{inputenc}	
+\usepackage[utf8x]{inputenc}	
 \usepackage{verbatim}
 \usepackage{xcolor}
 % \usepackage[usenames]{xcolor}
@@ -166,3 +166,13 @@ unicode=true
 
 \usepackage{tikz}
 \usepackage[]{circuitikz}
+
+\usepackage[% 
+% acronym % use acronym functionality 
+%,section = section % use sections for all glossary lists 
+,nonumberlist
+% ,xindy={language=portuguese}
+]{glossaries} 
+
+\makeglossaries
+% \printglossaries
