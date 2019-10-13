@@ -1,10 +1,5 @@
 # Curso de LaTeX
 
-## Agradecimentos
-
-Esse curso é um fork com algumas alterações do curso de 
-Lucas Severo, Pablo Alejandro e Luiz Oliveira. Meu sinceros agradecimentos.
-
 ## Ementa
 
 ### Introdução

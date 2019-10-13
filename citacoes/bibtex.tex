@@ -8,14 +8,26 @@ A forma mais simples de se referenciar dentro de um texto é usando o ambiente {
 \begin{frame}{O Bib\TeX{}}
 Entretanto, o Bib\TeX{} é uma ferramenta que oferece muito mais flexibilidade na formatação dos textos\footnote{Incluir o pacote \textit{natbib} para gerenciar os recursos do Bib\TeX{}.}.
 \lstinputlisting{citacoes/biblio.tex}
+Alguns dos estilos de bibliografia são esses:
+\begin{enumerate}
+	\item IEEEtran
+	\item abnt-num
+	\item abnt-alf
+	\item sbc
+	\item apalike
+	\
+\end{enumerate}
 \end{frame}
 
 \begin{frame}[fragile]
 \begin{lstlisting}[linewidth=10cm]
-@article{andrade2015,
-  title={Projeto de um conversor A/D de baixo consumo para aplica{\c{c}}{\~o}es de alta resolu{\c{c}}{\~a}o},
-  author={Andrade, Jos{\'e} Alberto Alves de},
-  year={2015}
+@inproceedings{praciano2018spatio,
+  title={Spatio-Temporal Trend Analysis of the Brazilian Elections Based on Twitter Data},
+  author={Praciano, Bruno Justino Garcia and da Costa, Jo{\~a}o Paulo Carvalho Lustosa and Maranh{\~a}o, Jo{\~a}o Paulo Abreu and de Mendon{\c{c}}a, F{\'a}bio L{\'u}cio Lopes and de Sousa J{\'u}nior, Rafael Timoteo and Prettz, Juliano Barbosa},
+  booktitle={2018 IEEE International Conference on Data Mining Workshops (ICDMW)},
+  pages={1355--1360},
+  year={2018},
+  organization={IEEE}
 }
 \end{lstlisting}
 \end{frame}
